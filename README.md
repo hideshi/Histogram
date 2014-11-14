@@ -1,5 +1,5 @@
 This is a command line application, which was written in AWK and shows a histogram on your screen.  
-The histogram will be composed of a sample source data.  
+The histogram will be composed of a sample source data file.  
   
 $ echo "How to use it."  
 $ /path/to/histogram.awk /path/to/data/height  
