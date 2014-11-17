@@ -40,15 +40,26 @@ END {
 				frequency[i]++;
 			}
 		}
+		sum = sum + (class[i] * frequency[i]);
 	}
+	#print "sum:" sum;
+
+	average = sum / FNR;
+	#print "average:" average;
 
 	print "histogram";
+
+	for(i = 0; i < NC; i++) {
+		tmp = tmp + ((class[i] + (interval / 2 + 0.5) - average) ^ 2) * frequency[i];
+	}
+	print "standard deviation:" sqrt(tmp / (FNR - 1));
+
 	for(i = 0; i < NC; i++) {
 		#print "frequency " i ":" frequency[i];
 		asterisk = "";
 		for(j = 1; j <= frequency[i]; j++) {
 			asterisk = asterisk "*";
 		}
-		print (class[i] + (interval / 2 + 0.5))":" asterisk;
+		print (class[i] + (interval / 2 + 0.5))":"asterisk;
 	}
 }
