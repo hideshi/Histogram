@@ -4,7 +4,7 @@ The histogram will be composed of a sample source data file.
 $ echo "How to use it."  
 $ /path/to/histogram.awk /path/to/data/height  
 histogram  
-standard deviation:6.27148
+standard deviation:6.27148  
 143:＊  
 148:＊＊＊＊  
 153:＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊  
@@ -14,7 +14,7 @@ standard deviation:6.27148
 $ echo "NC means Number of Class. You can specify it."  
 $ /path/to/histogram.awk -v NC=10 /path/to/data/height   
 histogram  
-standard deviation:5.92398
+standard deviation:5.92398  
 143:＊  
 146:＊＊  
 149:＊＊  
